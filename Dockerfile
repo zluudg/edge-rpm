@@ -1,4 +1,4 @@
-FROM fedora:41
+FROM fedora:42
 
 RUN dnf update -y
 RUN dnf install -y rpm-build rpm-devel rpmlint rpmdevtools
@@ -15,6 +15,7 @@ COPY tapir-edge.spec ./SPECS/
 COPY tapir-edm.service ./SOURCES
 COPY tapir-pop.service ./SOURCES
 COPY tapir-renew.service ./SOURCES
+COPY tapir-renew.timer ./SOURCES
 COPY tapir-edge.sysusers ./SOURCES
 COPY changelog ./SOURCES
 

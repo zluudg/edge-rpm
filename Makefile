@@ -9,6 +9,7 @@ interact:
 	docker run \
 		--tty \
 		--interactive \
+		--volume ./out:/out \
 		tapirbuilder \
 		bash
 
